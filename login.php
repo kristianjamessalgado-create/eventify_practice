@@ -6,7 +6,7 @@ $error = '';
 
 if (isset($_POST['submit'])) {
     $email = trim($_POST['email'] ?? '');
-    $password = trim($_POST['password'] ?? '');
+    $password = ($_POST['password'] ?? '');
 
     if ($email === '' || $password === '') {
         $error = 'Please enter both email and password.';
